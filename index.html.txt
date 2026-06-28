@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💛 Toy Story Movie Night 💙</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Fredoka',sans-serif;
+    background:linear-gradient(to bottom,#6ec6ff,#bde9ff);
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    position:relative;
+}
+
+/* Clouds */
+.cloud{
+    position:absolute;
+    background:white;
+    width:140px;
+    height:55px;
+    border-radius:50px;
+    opacity:.9;
+}
+
+.cloud::before,
+.cloud::after{
+    content:"";
+    position:absolute;
+    background:white;
+    border-radius:50%;
+}
+
+.cloud::before{
+    width:60px;
+    height:60px;
+    left:20px;
+    top:-25px;
+}
+
+.cloud::after{
+    width:70px;
+    height:70px;
+    right:20px;
+    top:-35px;
+}
+
+.cloud:nth-child(1){
+    top:80px;
+    left:5%;
+}
+
+.cloud:nth-child(2){
+    top:170px;
+    right:8%;
+}
+
+.cloud:nth-child(3){
+    bottom:120px;
+    left:20%;
+}
+
+/* Floating hearts */
+.heart{
+    position:absolute;
+    color:#ff4f81;
+    font-size:25px;
+    animation:float 10s linear infinite;
+    opacity:.8;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+.heart:nth-child(4){left:8%; animation-duration:10s;}
+.heart:nth-child(5){left:20%; animation-duration:14s;}
+.heart:nth-child(6){left:42%; animation-duration:12s;}
+.heart:nth-child(7){left:65%; animation-duration:15s;}
+.heart:nth-child(8){left:85%; animation-duration:11s;}
+
+.card{
+    width:90%;
+    max-width:650px;
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+    z-index:2;
+}
+
+h1{
+    font-size:3rem;
+    color:#ffcc00;
+    text-shadow:2px 2px #0c5ea8;
+}
+
+.subtitle{
+    margin:15px 0 30px;
+    color:#444;
+    font-size:1.15rem;
+}
+
+.info{
+    text-align:left;
+    max-width:450px;
+    margin:auto;
+    line-height:2.1;
+    font-size:1.15rem;
+}
+
+.info span{
+    color:#0c5ea8;
+    font-weight:bold;
+}
+
+button{
+    margin-top:35px;
+    background:#ff5c8a;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    font-size:1rem;
+    border-radius:50px;
+    cursor:pointer;
+    transition:.3s;
+    font-family:'Fredoka',sans-serif;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ff2f69;
+    box-shadow:0 8px 20px rgba(255,0,100,.3);
+}
+
+#hiddenMessage{
+    margin-top:30px;
+    font-size:1.4rem;
+    color:#ff2f69;
+    opacity:0;
+    transition:.6s;
+}
+
+.footer{
+    margin-top:20px;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<div class="cloud"></div>
+<div class="cloud"></div>
+<div class="cloud"></div>
+
+<div class="heart">❤️</div>
+<div class="heart">💖</div>
+<div class="heart">💕</div>
+<div class="heart">❤️</div>
+<div class="heart">💗</div>
+
+<div class="card">
+
+<h1>🤠 Toy Story Movie Night 💛</h1>
+
+<p class="subtitle">
+You've got a friend in me... and I'd love to spend movie night with you! 🧸✨
+</p>
+
+<div class="info">
+<p>🎬 <span>What to Watch:</span> Toy Story 5</p>
+<p>🍿 <span>Bring:</span> Popcorn or any favorite snack</p>
+<p>🌙 <span>When:</span> Midnight — June 29, 2026 @ 12:20 AM</p>
+</div>
+
+<button onclick="showLove()">
+💖 Will You Be My Movie Date?
+</button>
+
+<div id="hiddenMessage">
+❤️ Excited to see you, babe!!! ❤️<br><br>
+I love you so much. 💛🥹
+</div>
+
+<p class="footer">
+✨ To infinity... and beyond! 🚀
+</p>
+
+</div>
+
+<script>
+function showLove(){
+    document.getElementById("hiddenMessage").style.opacity="1";
+}
+</script>
+
+</body>
+</html>
